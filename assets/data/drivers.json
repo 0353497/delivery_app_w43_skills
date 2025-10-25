@@ -1,0 +1,82 @@
+[
+    {
+        "vehicle": "Bicycle",
+        "driver": "liam",
+        "cost": 32.23,
+        "travelTimeInMinutes": 20,
+        "position": {
+            "left": 100,
+            "top": 300
+        }
+    },
+    {
+        "vehicle": "Motorcycle",
+        "driver": "emma",
+        "cost": 45.50,
+        "travelTimeInMinutes": 12,
+        "position": {
+            "left": 250,
+            "top": 150
+        }
+    },
+    {
+        "vehicle": "Car",
+        "driver": "noah",
+        "cost": 65.75,
+        "travelTimeInMinutes": 15,
+        "position": {
+            "left": 180,
+            "top": 220
+        }
+    },
+    {
+        "vehicle": "Van",
+        "driver": "sophia",
+        "cost": 89.99,
+        "travelTimeInMinutes": 18,
+        "position": {
+            "left": 320,
+            "top": 280
+        }
+    },
+    {
+        "vehicle": "Scooter",
+        "driver": "ethan",
+        "cost": 28.90,
+        "travelTimeInMinutes": 25,
+        "position": {
+            "left": 75,
+            "top": 180
+        }
+    },
+    {
+        "vehicle": "Truck",
+        "driver": "mason",
+        "cost": 125.00,
+        "travelTimeInMinutes": 30,
+        "position": {
+            "left": 0,
+            "top": 100
+        }
+    },
+    {
+        "vehicle": "E-Bike",
+        "driver": "ava",
+        "cost": 38.75,
+        "travelTimeInMinutes": 18,
+        "position": {
+            "left": 100,
+            "top": 150
+        }
+    },
+    {
+        "vehicle": "Drone",
+        "driver": "charlie",
+        "cost": 95.50,
+        "travelTimeInMinutes": 8,
+        "position": {
+            "left": 300,
+            "top": 120
+        }
+    }
+]
