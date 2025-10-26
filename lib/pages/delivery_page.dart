@@ -565,6 +565,7 @@ class _VehicleMapViewState extends State<VehicleMapView> {
   Map<String, dynamic>? selectedDriver;
   Timer? _selectionTimer;
   bool isSearching = true;
+  final ExpansibleController controller = ExpansibleController();
 
   @override
   void initState() {
@@ -875,33 +876,55 @@ class _VehicleMapViewState extends State<VehicleMapView> {
 
                       SizedBox(height: 12),
                       ExpansionTile(
+                        controller: controller,
                         tilePadding: EdgeInsets.zero,
-                        title: Text(
-                          "Cancel",
-                          style: TextStyle(
-                            color: Color(0xff079A4B),
-                            decorationColor: Color(0xff079A4B),
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
-                        trailing: TextButton(
-                          style: ButtonStyle(
-                            shape: WidgetStatePropertyAll(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadiusGeometry.circular(8),
-                                side: BorderSide(color: Colors.black),
+                        title: (controller.isExpanded)
+                            ? Column(
+                                spacing: 5,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text("Track Progress"),
+                                  Container(
+                                    width: 30,
+                                    height: 2,
+                                    color: Color(0xff079A4B),
+                                  ),
+                                ],
+                              )
+                            : Text(
+                                "Cancel",
+                                style: TextStyle(
+                                  color: Color(0xff079A4B),
+                                  decorationColor: Color(0xff079A4B),
+                                  decoration: TextDecoration.underline,
+                                ),
                               ),
-                            ),
-                          ),
-                          onPressed: null,
-                          child: Text(
-                            "View Progress",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
+                        trailing: (controller.isExpanded)
+                            ? Text(
+                                "Collapse",
+                                style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                ),
+                              )
+                            : TextButton(
+                                style: ButtonStyle(
+                                  shape: WidgetStatePropertyAll(
+                                    RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadiusGeometry.circular(8),
+                                      side: BorderSide(color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                onPressed: null,
+                                child: Text(
+                                  "View Progress",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
                         children: [
                           SizedBox(
                             height: Get.height / 2,
